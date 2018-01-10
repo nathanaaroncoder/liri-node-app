@@ -97,7 +97,9 @@ function movieThis(){
 		  console.log('\nTitle: ' + JSON.parse(body).Title);
 		  console.log('Year: ' + JSON.parse(body).Year);
 		  console.log('IMDB Rating: ' + JSON.parse(body).imdbRating);
-		  console.log('Rotten Tomatoes Rating: ' + JSON.parse(body).Ratings[1].Value);
+		  if(JSON.parse(body).Ratings.length > 1) {
+		  	console.log('Rotten Tomatoes Rating: ' + JSON.parse(body).Ratings[1].Value);
+		  }
 		  console.log('Country: ' + JSON.parse(body).Country);
 		  console.log('Language: ' + JSON.parse(body).Language);
 		  console.log('Plot: ' + JSON.parse(body).Plot);
@@ -110,7 +112,9 @@ function movieThis(){
 		  console.log('\nTitle: ' + JSON.parse(body).Title);
 		  console.log('Year: ' + JSON.parse(body).Year);
 		  console.log('IMDB Rating: ' + JSON.parse(body).imdbRating);
-		  console.log('Rotten Tomatoes Rating: ' + JSON.parse(body).Ratings[1].Value);
+		  if(JSON.parse(body).Ratings.length > 1) {
+		  	console.log('Rotten Tomatoes Rating: ' + JSON.parse(body).Ratings[1].Value);
+		  }
 		  console.log('Country: ' + JSON.parse(body).Country);
 		  console.log('Lanuage: ' + JSON.parse(body).Language);
 		  console.log('Plot: ' + JSON.parse(body).Plot);
@@ -147,7 +151,7 @@ function doWhatItSays(){
 			console.log("\nArtist: " + data.tracks.items[0].album.artists[0].name);
 			console.log("Song: " + data.tracks.items[0].name);
 			console.log("Album: " + data.tracks.items[0].album.name);
-			console.log("Preview: " + data.tracks.items[0].preview_url.spotify + "\n");
+			console.log("Preview: " + data.tracks.items[0].external_urls.spotify + "\n");
 		});
 	 }
 
@@ -160,7 +164,9 @@ function doWhatItSays(){
 		  console.log('\nTitle: ' + JSON.parse(body).Title);
 		  console.log('Year: ' + JSON.parse(body).Year);
 		  console.log('IMDB Rating: ' + JSON.parse(body).imdbRating);
-		  console.log('Rotten Tomatoes Rating: ' + JSON.parse(body).Ratings[1].value);
+		  if(JSON.parse(body).Ratings.length > 1) {
+		  	console.log('Rotten Tomatoes Rating: ' + JSON.parse(body).Ratings[1].Value);
+		  }
 		  console.log('Country: ' + JSON.parse(body).Country);
 		  console.log('Language: ' + JSON.parse(body).Language);
 		  console.log('Plot: ' + JSON.parse(body).Plot);

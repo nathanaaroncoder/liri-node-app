@@ -1,15 +1,9 @@
 var keys = require("./keys.js");
-
 var Twitter = require('twitter');
-
 var Spotify = require('node-spotify-api');
-
 var request = require('request');
-
 var fs = require('fs');
-
 var input = process.argv[2];
-
 var secondInput = process.argv[3];
 
 if (input === "my-tweets"){
@@ -23,6 +17,9 @@ else if (input === "movie-this"){
 }
 else if (input === "do-what-it-says"){
 	doWhatItSays();
+}
+else{
+	console.log("Sorry, I don't know that one. Please use a valid function.")
 }
 
 
@@ -176,14 +173,6 @@ function doWhatItSays(){
 	 }
 
 
- 
-  
-
 	});
 
-
 }
-
-
-
-
